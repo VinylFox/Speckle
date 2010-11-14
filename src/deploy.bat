@@ -1,0 +1,1 @@
+java -jar JSBuilder2.jar --projectFile "%CD%\speckle.jsb2" --homeDir "%CD%"

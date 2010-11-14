@@ -1,0 +1,51 @@
+{
+    "projectName": "Speckle Mobile",
+    "deployDir": "resources/deploy",
+    "licenseText": "Copyright 2010 Speckle Mobile",
+    "pkgs": [{
+        "name": "Speckle",
+        "file": "speckle.js",
+        "isDebug": true,
+        "fileIncludes": [{
+            "text": "Ext.ux.touch.SwipeTabs.js",
+            "path": "resources/ux/"
+        },{
+            "text": "Ext.ux.touch.ListPullRefresh.js",
+            "path": "resources/ux/"
+        },{
+            "text": "Stores.js",
+            "path": "resources/app/"
+        },{
+            "text": "Entries.js",
+            "path": "resources/app/"
+        },{
+            "text": "Projects.js",
+            "path": "resources/app/"
+        },{
+            "text": "ProjectDetail.js",
+            "path": "resources/app/"
+        },{
+            "text": "ProjectEdit.js",
+            "path": "resources/app/"
+        },{
+            "text": "UserInfoForm.js",
+            "path": "resources/app/"
+        },{
+            "text": "SettingsForm.js",
+            "path": "resources/app/"
+        },{
+            "text": "TimerList.js",
+            "path": "resources/app/"
+        },{
+            "text": "Timer.js",
+            "path": "resources/app/"
+        },{
+            "text": "Search.js",
+            "path": "resources/app/"
+        },{
+            "text": "Speckle.js",
+            "path": "resources/app/"
+        }]
+    }],
+    "resources": []
+}

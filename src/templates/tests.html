@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Speckle Mobile Test Page</title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/resources/css/sencha-touch-debug.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/speckle.css" type="text/css">
+  <style>
+    .col {
+      float: left;
+      margin: 10px;
+    }
+  </style>
+  <script type="text/javascript" src="/resources/lib/sencha-touch-debug.js"></script>
+  <script type="text/javascript">
+    Ext.ns('Speckle', 'Speckle.locale', 'Speckle.views', 'Speckle.cache', 'Speckle.stores');
+    var app;
+  </script>
+  <script type="text/javascript" src="/resources/locale/locale-en_US.js"></script>
+  {{includes}}
+  <script type="text/javascript">
+    Ext.setup({
+        onReady: function() {
+            var app = {
+              settings: {
+                account: window.localStorage.getItem('account'),
+                token: window.localStorage.getItem('token')
+              }
+            };
+            Speckle.stores.Projects.on('load', function(){
+              var val = '15min<br/>';
+              for (i=0;i<200;i++){
+                val = val + i + ' = ' + Speckle.minuteRenderer(i,undefined,false,15) + '<br/>';
+              }
+              Ext.get('timeroutput15').update(val);
+              val = '10min<br/>';
+              for (i=0;i<200;i++){
+                val = val + i + ' = ' + Speckle.minuteRenderer(i,undefined,false,10) + '<br/>';
+              }
+              Ext.get('timeroutput10').update(val);
+              val = '1min<br/>';
+              for (i=0;i<200;i++){
+                val = val + i + ' = ' + Speckle.minuteRenderer(i,undefined,false,1) + '<br/>';
+              }
+              Ext.get('timeroutput1').update(val);
+              val = 'N/Amin<br/>';
+              for (i=0;i<200;i++){
+                val = val + i + ' = ' + Speckle.minuteRenderer(i,undefined,false) + '<br/>';
+              }
+              Ext.get('timeroutput0').update(val);
+            });
+            Speckle.stores.Projects.load( {
+        			params : app.settings
+        		});
+        }
+    });
+  </script>
+</head>
+<body>
+  <div id="timeroutput15" class="col"></div>
+  <div id="timeroutput10" class="col"></div>
+  <div id="timeroutput1" class="col"></div>
+  <div id="timeroutput0" class="col"></div>
+</body>
+</html>

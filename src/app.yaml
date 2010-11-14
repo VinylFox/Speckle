@@ -1,0 +1,24 @@
+application: specklemobile
+version: 8
+runtime: python
+api_version: 1
+
+handlers:
+- url: /resources
+  static_dir: resources
+
+- url: /favicon.ico
+  static_files: resources/favicon.ico
+  upload: resources/favicon.ico
+
+- url: /speckle.manifest
+  script: manifest.py
+
+- url: /api/.*
+  script: api.py
+
+- url: /tests/
+  script: tests.py
+
+- url: /.*
+  script: default.py

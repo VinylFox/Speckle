@@ -1,0 +1,254 @@
+/* styles for pull to refresh */
+
+div.pullrefresh, div.pullrefresh div.msgwrap {
+  background-color: #e1e1e1 !important;
+}
+
+div.pullrefresh span.arrow {
+  width: 32px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-image: url('/resources/img/blackArrow.png');
+  background-repeat: no-repeat;
+  margin: 10px 0 0 25px;
+}
+
+div.loadingspacer span.loading {
+  width: 32px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-image: url('/resources/img/loader.gif');
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+}
+
+div.pullrefresh span.msg, div.loadingspacer span.msg {
+  width: 80%;
+  text-align: center;
+  font-size: 0.9em;
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  margin: 5px 0 5px 40px; 
+  font-weight: bold;
+}
+
+div.pullrefresh span.lastupdate {
+  width: 80%;
+  text-align: center;
+  font-size: 0.7em;
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  margin: 15px 0 5px 40px;
+}
+
+/* styles for mobile only */
+
+div.x-panel.x-fullscreen.splash-bg {
+  background: #f7f7f7 url('/resources/img/splash_bg.png') no-repeat 50% 50%;
+}
+
+div.x-panel.x-fullscreen.coming-soon {
+  background: #f7f7f7 url('/resources/img/coming_soon.png') no-repeat 50% 50%;
+}
+
+div.x-container.descriptive-text {
+  margin: 10px;
+  font-size: 17px;
+}
+
+div.x-container.hint-text {
+  margin: 10px;
+  font-size: 15px;
+  color: #C0C0C0;
+}
+
+div.x-container.hint-text B {
+  color: #636363;
+  font-weight: bold;
+}
+
+div.entries div.entry span {
+  color: #AAAAAA;
+}
+
+div.entries div.entry {
+  height: auto;
+}
+
+div.projects div.x-panel-body.x-scroller-parent {
+  background-color: #EEE;
+}
+
+div.entries div.x-panel-body.x-scroller-parent {
+  background-color: #EEE;
+}
+
+div.timers div.x-panel-body.x-scroller-parent {
+  background-color: #EEE;
+}
+
+div.entries div.entry div.minutes {
+  width: 65px;
+  float: left;
+}
+
+div.entries div.entry div.project {
+  float: left;
+  overflow: hidden;
+}
+
+div.entries div.entry div.date {
+  width: 80px;
+  float: right;
+}
+
+div.entries div.entry div.tags {
+  clear: both;
+  overflow: hidden;
+}
+
+div.entries div.entry div.tags a.tag {
+  color: #403D26;
+  border-right: 1px solid #E5DC8A;
+  background: url("/resources/img/tag.png") no-repeat scroll left center transparent;
+  padding: 1px 3px 1px 9px;
+  margin: 0 3px 3px 0;
+  font-size: 70%;
+  height: 16px;
+  line-height: 16px;
+  white-space:nowrap;
+}
+
+div.timers div.timer {
+  height: auto !important;
+}
+
+div.timers div.timer.active {
+  background-color: #BCE35F;
+}
+
+div.timers div.timer div.minutes {
+  width: 65px;
+  float: left;
+}
+
+div.timers div.timer div.project {
+  float: left;
+  overflow: hidden;
+}
+
+div.timers div.timer div.date {
+  width: 80px;
+  float: right;
+}
+
+div.timers div.timer div.tags {
+  clear: both;
+  overflow: hidden;
+}
+
+div.timers div.timer div.tags a.tag {
+  color: #403D26;
+  border-right: 1px solid #E5DC8A;
+  background: url("/resources/img/tag.png") no-repeat scroll left center transparent;
+  padding: 1px 3px 1px 9px;
+  margin: 0 3px 3px 0;
+  font-size: 70%;
+  height: 16px;
+  line-height: 16px;
+  white-space:nowrap;
+}
+
+div.projects div.project div.name {
+  float: left;
+  overflow: hidden;
+}
+
+div.projects div.project div.budget {
+  float: right;
+  width: 30px;
+}
+
+div.timer-current {
+  font-size: 140%;
+  text-align: center;
+}
+
+div.timer-current span {
+  color: #AAAAAA;
+}
+
+div.entries div.x-indexbar{
+  width: 2.5em !important;
+}
+
+/* pie styles */
+
+a.budget-piechart {
+  width:24px;
+  height:24px;
+  background:url(/resources/img/budget-piechart.png) -240px 0 no-repeat;
+  float:left;
+  margin-right:5px;
+  display:block;
+}
+
+a.budget-piechart.single {
+  margin:0;
+}
+
+a.budget-piechart.p00 { background-position:0 0; }
+a.budget-piechart.p10 { background-position:-24px 0; }
+a.budget-piechart.p20 { background-position:-48px 0; }
+a.budget-piechart.p30 { background-position:-72px 0; }
+a.budget-piechart.p40 { background-position:-96px 0; }
+a.budget-piechart.p50 { background-position:-120px 0; }
+a.budget-piechart.p60 { background-position:-144px 0; }
+a.budget-piechart.p70 { background-position:-168px 0; }
+a.budget-piechart.p80 { background-position:-192px 0; }
+a.budget-piechart.p90 { background-position:-216px 0; }
+
+/* styles for the regular web site */
+
+body.website {
+  background-color: #f7f7f7;
+  color:#555555;
+  font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;
+  font-size:15px;
+  font-style:normal;
+  font-weight:normal;
+  letter-spacing:normal;
+  margin:0;
+  padding:0;
+  text-align:left;
+}
+
+div.header {
+  margin:0;
+  padding:0;
+  width:100%;
+  font-size:25px;
+  font-weight: bold;
+  color: #558425;
+  background-color: #C7E76C;
+  text-align: center;
+}
+
+div.mainwrap {
+  width: 375px;
+}
+
+p.note {
+  font-size: 10px;
+}
+
+p.footer {
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+CACHE MANIFEST 
+#rev8
+NETWORK:
+api/entries
+api/projects
+api/tags
+CACHE:
+resources/css/sencha-touch.css 
+resources/css/speckle.css 
+resources/lib/ext-touch.js 
+resources/deploy/speckle.js 
+resources/img/phone_startup.png
+resources/img/icon.png
+resources/img/splash_bg.png
+resources/img/tag.png

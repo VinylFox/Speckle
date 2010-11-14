@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{{manifest}}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Speckle Mobile {{debug}}</title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/resources/css/sencha-touch.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/speckle.css" type="text/css">
+  <script type="text/javascript" src="/resources/lib/sencha-touch{{debug}}.js"></script>
+  <script type="text/javascript">
+    Ext.ns('Speckle', 'Speckle.locale', 'Speckle.views', 'Speckle.cache', 'Speckle.stores');
+    var app;
+  </script>
+  <script type="text/javascript" src="/resources/locale/locale-en_US.js"></script>
+  {{includes}}
+  <script type="text/javascript">
+    Ext.setup({
+        phoneStartupScreen: '/resources/img/phone_startup.png',
+        icon: '/resources/img/icon.png',
+        glossOnIcon: false,
+        onReady: function() {
+            app = new Speckle.App();
+            app.settingsTest = {
+              account: 'apitest',
+              token: 'lx3gi6pxdjtjn57afp8c2bv1me7g89j'
+            };
+            app.settings = {
+              account: window.localStorage.getItem('account'),
+              token: window.localStorage.getItem('token')
+            };
+            if (app.settings.account === '' || app.settings.account === null || app.settings.token === '' || app.settings.token === null){
+              Ext.Msg.alert(Speckle.locale.welcome, Speckle.locale.welcomemsg, function(){
+                app.setActiveItem(2);
+                app.getComponent('mainapp').setActiveItem(0);
+              });
+            }else{
+              app.loadStores();
+              setTimeout(function(){app.setActiveItem(1);},3000);
+            }
+        }
+    });
+  </script>
+  <script type="text/javascript">
+    if (!navigator.onLine) {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19336167-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function(){
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
